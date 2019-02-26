@@ -23,7 +23,7 @@ class App extends Component {
               render={props => <Products sortBy="newest" {...props} />}
             />
             <Route path="/posts/:year?/:month?" exact component={Posts} />
-            <Route path="/admint" component={Products} />
+            <Route path="/admin" component={Products} />
             <Redirect from="/messages" to="/posts" />
             <Route path="/" exact component={Home} />
             <Route path="/not-found" component={NotFound} />
