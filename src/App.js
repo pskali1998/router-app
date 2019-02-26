@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Products from "./components/products";
 import Posts from "./components/posts";
 import Home from "./components/home";
+import Dashboard from "./components/admin/dashboard";
 import "./App.css";
 import ProductDetails from "./components/productDetails";
 import NotFound from "./components/notFound";
@@ -23,7 +24,7 @@ class App extends Component {
               render={props => <Products sortBy="newest" {...props} />}
             />
             <Route path="/posts/:year?/:month?" exact component={Posts} />
-            <Route path="/admin" component={Products} />
+            <Route path="/admin" component={Dashboard} />
             <Redirect from="/messages" to="/posts" />
             <Route path="/" exact component={Home} />
             <Route path="/not-found" component={NotFound} />
